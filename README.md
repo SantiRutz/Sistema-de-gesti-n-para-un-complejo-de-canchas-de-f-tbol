@@ -10,7 +10,6 @@ Sistema para administrar los turnos del complejo de canchas de fútbol El Potrer
 - Jonathan Coman
 - Tomás Ortiz
 - Alan Chirino
-- Alan Tisera
 
 ## Sprint 0 – Análisis del problema
 
