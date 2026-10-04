@@ -20,4 +20,17 @@ public class Reserva {
         this.estado="RESERVADA";
         detalles = new ArrayList<DetalleReserva>();
     }
+    
+    
+    public int getNumero(){return this.numero;}
+    public Cliente getCliente(){return cliente;}
+    public Cancha getCancha(){return cancha;}
+    public String getFecha(){return fecha;}
+    public int getHoraInicio(){return horaInicio;}
+    public String getEstado(){return estado;}
+    public ArrayList<DetalleReserva> getDetalles(){return detalles;}
+
+    public int getHoraFin(){
+        return this.horaInicio + this.cantidadHoras;
+    }
 }
