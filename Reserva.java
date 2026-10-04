@@ -33,4 +33,16 @@ public class Reserva {
     public int getHoraFin(){
         return this.horaInicio + this.cantidadHoras;
     }
+    
+        public void agregarDetalle(DetalleReserva det){
+        detalles.add(det);
+    }
+
+    public double calcularTotalExtras(){
+        double total=0.0;
+        for(DetalleReserva det: detalles){
+            total = total + det.calcularSubtotal();
+        }
+        return total;
+    }
 }
