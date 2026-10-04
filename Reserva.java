@@ -9,4 +9,15 @@ public class Reserva {
     private int cantidadHoras;
     private String estado;
     private ArrayList<DetalleReserva> detalles;
+    
+    public Reserva (int codigo, Cliente cli, Cancha can, String fecha, int horaInicio, int cantidadHoras){
+        this.numero=codigo;
+        this.cliente=cli;
+        this.cancha=can;
+        this.fecha=fecha;
+        this.horaInicio=horaInicio;
+        this.cantidadHoras=cantidadHoras;
+        this.estado="RESERVADA";
+        detalles = new ArrayList<DetalleReserva>();
+    }
 }
