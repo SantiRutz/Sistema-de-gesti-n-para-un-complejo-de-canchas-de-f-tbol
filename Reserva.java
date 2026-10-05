@@ -45,4 +45,16 @@ public class Reserva {
         }
         return total;
     }
+    
+        public double calcularPrecioCancha(){
+        double total=0.0;
+        for(int hora=horaInicio; hora<getHoraFin(); hora++){
+            if(hora>=20){
+                total = total + cancha.getPrecioHora()*1.20;
+            }else{
+                total = total + cancha.getPrecioHora();
+            }
+        }
+        return total;
+    }
 }
