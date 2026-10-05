@@ -57,4 +57,19 @@ public class Reserva {
         }
         return total;
     }
+    
+       public double calcularDescuento(){
+        if(cliente.isFrecuente()){
+            return calcularPrecioCancha() * 10 / 100;
+        }
+        return 0.0;
+    }
+
+    public double calcularTotal(){
+        return calcularPrecioCancha() - calcularDescuento() + calcularTotalExtras();
+    }
+
+    public double calcularSenia(){
+        return calcularTotal() * 30 / 100;
+    }
 }
