@@ -72,4 +72,31 @@ public class Reserva {
     public double calcularSenia(){
         return calcularTotal() * 30 / 100;
     }
+    public void confirmar(){
+        estado="CONFIRMADA";
+    }
+
+    public void cancelar(){
+        estado="CANCELADA";
+    }
+
+    public boolean ocupa(int numeroCancha, String fecha, int hora){
+        if(cancha.getNumero() != numeroCancha){
+            return false;
+        }
+        if(!this.fecha.equals(fecha)){
+            return false;
+        }
+        if(hora < horaInicio){
+            return false;
+        }
+        if(hora >= getHoraFin()){
+            return false;
+        }
+        return true;
+    }
+
+    public String mostrarInformacion(){
+        return numero + " " + cliente.getNombre() + " " + estado + " total: " + calcularTotal();
+    }
 }
