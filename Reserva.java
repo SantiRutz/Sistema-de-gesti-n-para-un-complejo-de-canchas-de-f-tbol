@@ -46,7 +46,7 @@ public class Reserva {
         return total;
     }
     
-        public double calcularPrecioCancha(){
+        public double calcularPrecioCancha(){ // se puede compactar el if 
         double total=0.0;
         for(int hora=horaInicio; hora<getHoraFin(); hora++){
             if(hora>=20){
